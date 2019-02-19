@@ -3,17 +3,14 @@
 
 var React = require("react");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var Nav$ParcelRouter = require("./Nav.bs.js");
 var Router$ParcelRouter = require("./Router.bs.js");
 var HomePage$ParcelRouter = require("./HomePage.bs.js");
 var LoginPage$ParcelRouter = require("./LoginPage.bs.js");
 var LogoutPage$ParcelRouter = require("./LogoutPage.bs.js");
 var NotFoundPage$ParcelRouter = require("./NotFoundPage.bs.js");
 
-var component = ReasonReact.statelessComponent("Nav");
-
-function str(prim) {
-  return prim;
-}
+var component = ReasonReact.statelessComponent("App-ParcelRouter");
 
 function make(_children) {
   return /* record */[
@@ -27,39 +24,7 @@ function make(_children) {
           /* willUpdate */component[/* willUpdate */7],
           /* shouldUpdate */component[/* shouldUpdate */8],
           /* render */(function (_self) {
-              return React.createElement("div", undefined, React.createElement("ul", {
-                              className: "nav"
-                            }, React.createElement("li", undefined, ReasonReact.element(undefined, undefined, Router$ParcelRouter.Link[/* make */2]("/", undefined, /* array */["clicking here!"]))), React.createElement("li", undefined, ReasonReact.element(undefined, undefined, Router$ParcelRouter.Link[/* make */2]("login", undefined, /* array */["Go To Login"]))), React.createElement("li", undefined, ReasonReact.element(undefined, undefined, Router$ParcelRouter.Link[/* make */2]("/logout", undefined, /* array */["Logout"])))));
-            }),
-          /* initialState */component[/* initialState */10],
-          /* retainedProps */component[/* retainedProps */11],
-          /* reducer */component[/* reducer */12],
-          /* jsElementWrapped */component[/* jsElementWrapped */13]
-        ];
-}
-
-var Nav = /* module */[
-  /* Link */0,
-  /* component */component,
-  /* str */str,
-  /* make */make
-];
-
-var component$1 = ReasonReact.statelessComponent("App-ParcelRouter");
-
-function make$1(_children) {
-  return /* record */[
-          /* debugName */component$1[/* debugName */0],
-          /* reactClassInternal */component$1[/* reactClassInternal */1],
-          /* handedOffState */component$1[/* handedOffState */2],
-          /* willReceiveProps */component$1[/* willReceiveProps */3],
-          /* didMount */component$1[/* didMount */4],
-          /* didUpdate */component$1[/* didUpdate */5],
-          /* willUnmount */component$1[/* willUnmount */6],
-          /* willUpdate */component$1[/* willUpdate */7],
-          /* shouldUpdate */component$1[/* shouldUpdate */8],
-          /* render */(function (_self) {
-              return React.createElement("div", undefined, ReasonReact.element(undefined, undefined, make(/* array */[])), ReasonReact.element(undefined, undefined, Router$ParcelRouter.make((function (url) {
+              return React.createElement("div", undefined, ReasonReact.element(undefined, undefined, Nav$ParcelRouter.make(/* array */[])), ReasonReact.element(undefined, undefined, Router$ParcelRouter.make((function (url) {
                                     var match = url[/* path */0];
                                     var exit = 0;
                                     if (match) {
@@ -90,14 +55,13 @@ function make$1(_children) {
                                     
                                   }))));
             }),
-          /* initialState */component$1[/* initialState */10],
-          /* retainedProps */component$1[/* retainedProps */11],
-          /* reducer */component$1[/* reducer */12],
-          /* jsElementWrapped */component$1[/* jsElementWrapped */13]
+          /* initialState */component[/* initialState */10],
+          /* retainedProps */component[/* retainedProps */11],
+          /* reducer */component[/* reducer */12],
+          /* jsElementWrapped */component[/* jsElementWrapped */13]
         ];
 }
 
-exports.Nav = Nav;
-exports.component = component$1;
-exports.make = make$1;
+exports.component = component;
+exports.make = make;
 /* component Not a pure module */
